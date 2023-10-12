@@ -28,8 +28,7 @@ export const StudentList = ({ students }: Props) => {
             <td className="flex-1">{student.grade1}</td>
             <td className="flex-1">{student.grade2}</td>
             <td className="flex-1">
-                {student.active && ((student.grade1 + student.grade2) / 2).toFixed(1)}
-                {!student.active && '--'}
+                {student.active ? ((student.grade1 + student.grade2) / 2).toFixed(1) : '--'}
             </td>
         </tr>
     );
